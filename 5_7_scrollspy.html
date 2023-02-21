@@ -92,7 +92,7 @@
 
   <div class="container">
     <!--#################START HERE#####################-->
-    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light mb-3">
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light mb-3" id="exep1">
       <div class="container">
         <a class="navbar-brand" href="#">Navbar</a>
         <ul class="navbar-nav">
@@ -107,10 +107,15 @@
           </li class="nav-item">
         </ul>
       </div>
+      <!-- <nav class="nav nav-pills flex-column">
+        <a class="nav-link ml-3 my-1" href="#welcome">Welcome</a>
+        <a class="nav-link ml-3 my-1" href="#about">About</a>
+        <a class="nav-link ml-3 my-1" href="#services">Services</a>
+      </nav> -->
     </nav>
 
-    <section>
-      <h3>Welcome</h3>
+    <section data-spy="scroll" data-target="#exep1" data-offset="0">
+      <h3 id="welcome">Welcome</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, reiciendis ullam sit libero recusandae obcaecati modi,
         iusto facere, distinctio corporis in officiis quidem vel veniam eum fugit quibusdam. Repellat quod explicabo repudiandae,
         tenetur hic fugiat nostrum aperiam corrupti necessitatibus nulla! Nemo aperiam officiis velit nihil maiores provident
@@ -139,8 +144,8 @@
         ut, quidem cum architecto.</p>
     </section>
 
-    <section>
-      <h3>About</h3>
+    <section data-spy="scroll" data-target="#exep1" data-offset="0">
+      <h3 id="about">About</h3>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt nemo iure at, ab cupiditate consequuntur nobis hic
       odit, animi, quos ipsum tempore consectetur vel molestias quasi a ea dolore harum aut eligendi repellat? Harum aperiam
       aspernatur, debitis quia quos vel cumque perspiciatis enim eaque sequi beatae id in repellendus tempore quaerat error
@@ -175,8 +180,8 @@
       Ratione perferendis commodi ullam!
     </section>
 
-    <section>
-      <h3>Services</h3>
+    <section data-spy="scroll" data-target="#exep1" data-offset="0">
+      <h3 id="services">Services</h3>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente laudantium reiciendis nostrum impedit voluptatum
         repudiandae dicta deserunt praesentium eveniet assumenda, laboriosam facere. Omnis et, deleniti magnam dolorem porro
         repellendus nemo animi quis dolores iusto impedit fugiat repellat alias voluptatibus vitae consequatur aperiam tempore
@@ -218,7 +223,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
   <script>
-
+    $('[data-spy="scroll"]').each(function () {
+      var $spy = $(this).scrollspy('refresh')
+    })
   </script>
 </body>
 
