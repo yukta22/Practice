@@ -88,29 +88,30 @@
     <!--##################START HERE####################-->
 
     <!-- POPOVER -->
-    <button class="btn btn-danger">
-      Toggle popover
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+      Popover on top
     </button>
-
-    <button class="btn btn-primary">
-      Toggle popover
+    
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+      Popover on right
     </button>
-
-    <button class="btn btn-warning">
-      Toggle popover
+    
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+    sagittis lacus vel augue laoreet rutrum faucibus.">
+      Popover on bottom
     </button>
-
-    <button class="btn btn-info">
-      Toggle popover
+    
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+      Popover on left
     </button>
-
     <br>
     <br>
 
     <!-- DISMISSIBLE POPOVER -->
-    <button class="btn btn-primary">
-      Toggle popover
-    </button>
+    <span class="d-inline-block" data-toggle="popover" data-content="Disabled popover">
+      <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Disabled button</button>
+    </span>
+    
 
     <hr>
 
@@ -129,6 +130,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
   <script>
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
 
   </script>
 </body>
